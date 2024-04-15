@@ -1,0 +1,21 @@
+.colorChange{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: hsl(238, 87%, 36%);
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(238, 87%, 46%);
+}

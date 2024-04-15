@@ -1,0 +1,45 @@
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+}
+.wrapper button{
+    padding: 10px 20px;
+    background-color: hsl(238, 87%, 36%);
+    border: none;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.wrapper button:hover {
+    background-color: hsl(238, 87%, 46%);
+}
+
+.wrapper h1{
+    font-size: 2.5rem;
+}
+
+.item{
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 0px 5px 15px 15px;
+    border-radius: 10px;
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question span{
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
