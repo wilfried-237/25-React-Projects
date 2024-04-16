@@ -1,0 +1,44 @@
+.slider-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: absolute;
+}
+
+.slider{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-img{
+    position: relative;
+    width: 100%;
+}
+.slider-btn{
+    position: absolute;
+    z-index: 100;
+}
+.previous{
+    left: 20px;
+    top: 50%;
+}
+.next{
+    right: 20px;
+    top: 50%;
+}
+
+.slider-btn{
+    position: absolute;
+    z-index: 100;
+}
+.inactive{
+    display: none;
+}
+
+.active{
+
+}

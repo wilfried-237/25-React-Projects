@@ -1,0 +1,8 @@
+.star-div{
+    width: 100%;
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(165, 6%, 87%);
+}
