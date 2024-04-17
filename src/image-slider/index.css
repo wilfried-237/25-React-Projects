@@ -21,6 +21,8 @@
 .slider-btn{
     position: absolute;
     z-index: 100;
+    color: white;
+    font-size: 30px;
 }
 .previous{
     left: 20px;
@@ -31,10 +33,10 @@
     top: 50%;
 }
 
-.slider-btn{
-    position: absolute;
-    z-index: 100;
+.slider-btn:hover{
+    color: hsl(109, 94%, 40%);
 }
+
 .inactive{
     display: none;
 }

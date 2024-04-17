@@ -6,3 +6,16 @@
     align-items: center;
     background-color: hsl(165, 6%, 87%);
 }
+.star{
+    font-size: 30px;
+}
+
+.checked{
+    font-size: 30px;
+    color: rgb(252, 252, 12);
+}
+
+.inactive{
+    font-size: 30px;
+    color: rgb(255, 255, 235);
+}

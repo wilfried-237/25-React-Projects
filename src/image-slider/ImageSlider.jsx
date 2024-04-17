@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "./index.css";
 
 function ImageSlider(url) {
@@ -46,7 +47,7 @@ function ImageSlider(url) {
 
   function handlePrevious() {
     setCurrentSlide(
-      currrentSlide === 0 ? images.length - 1 : currrentSlide + 1
+      currrentSlide === 0 ? images.length - 1 : currrentSlide - 1
     );
   }
 
@@ -59,12 +60,10 @@ function ImageSlider(url) {
   return (
     <div className="slider-container">
       <div className="slider">
-        <button
+        <BsArrowLeftCircleFill
           className="previous slider-btn"
           onClick={() => handlePrevious()}
-        >
-          Previous
-        </button>
+        />
 
         {images && images.length
           ? images.map((imageItem, index) => (
@@ -81,9 +80,10 @@ function ImageSlider(url) {
             ))
           : null}
 
-        <button className="next slider-btn" onClick={() => handleNext()}>
-          Next
-        </button>
+        <BsArrowRightCircleFill
+          className="next slider-btn"
+          onClick={() => handleNext()}
+        />
       </div>
     </div>
   );
