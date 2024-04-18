@@ -1,33 +1,21 @@
 import { BsStarFill } from "react-icons/bs";
 import "./index.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function StarRating(number) {
+function StarRating(number = 5) {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
-  let numberOfStars = [];
-  
-  console.log(numberOfStars);
-          
-  for(let i=0; i<=number; i++){
-
-    numberOfStars[i] = i
-    console.log(numberOfStars);
-
-
-  }
-
   function handleClick(currentIndex) {
-    console.log(currentIndex);
+    setRating(currentIndex == rating? 0 : currentIndex);
   }
 
   function handleMouseMove(currentIndex) {
-    console.log(currentIndex);
+    setHoverRating(currentIndex);
   }
 
-  function handleMouseLeave(currentIndex) {
-    console.log(currentIndex);
+  function handleMouseLeave() {
+    setHoverRating(0);
   }
 
   return (
@@ -36,19 +24,19 @@ function StarRating(number) {
         <h1> Star Rating </h1>
 
         {
-          
-          numberOfStars.map((_, index) => {
-            return (
+          Array.from({ length: number.number }, (x, i) => i).map((_, index) => {
+             index += 1
+            
+            return(
               <BsStarFill
                 key={index}
-                className={index <= rating ? "checked star" : "inactive star"}
+                className={index <= rating || index <= hoverRating  ? "checked star" : "star"}
                 onMouseMove={() => handleMouseMove(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
+                onMouseLeave={() => handleMouseLeave()}
                 onClick={() => handleClick(index)}
               />
             );
           })
-          
         }
       </div>
     </div>
