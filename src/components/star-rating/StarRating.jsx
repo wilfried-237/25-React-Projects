@@ -1,6 +1,6 @@
 import { BsStarFill } from "react-icons/bs";
 import "./index.css";
-import { useEffect, useState } from "react";
+import {useState} from "react";
 
 function StarRating(number = 5) {
   const [rating, setRating] = useState(0);

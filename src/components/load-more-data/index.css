@@ -1,0 +1,63 @@
+.loadMoreDiv{
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+.btnDiv button{
+    margin: auto;
+    z-index: 1000;
+}
+
+.productsDiv{
+    display: block;
+}
+
+
+.itemCard{
+    width: 25%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid hsl(0, 0%, 93%);
+}
+
+.itemCard img{
+    width: 100%;
+    margin: auto;
+}
+
+.itemCard .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.itemCard .description p{
+    font-size: 1.2rem;
+    overflow: hidden;
+    margin: 0;
+}
+.itemCard .description h2{
+    font-size: 1rem;
+   margin: 0;
+}
+.itemCard button{
+    width: 100%;
+}
+
