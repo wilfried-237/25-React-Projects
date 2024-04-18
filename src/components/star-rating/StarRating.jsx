@@ -6,15 +6,27 @@ function StarRating(number) {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
-  function hanbleClick(currentIndex) {
+  let numberOfStars = [];
+  
+  console.log(numberOfStars);
+          
+  for(let i=0; i<=number; i++){
+
+    numberOfStars[i] = i
+    console.log(numberOfStars);
+
+
+  }
+
+  function handleClick(currentIndex) {
     console.log(currentIndex);
   }
 
-  function handleMouseMove(index) {
+  function handleMouseMove(currentIndex) {
     console.log(currentIndex);
   }
 
-  function handleMouseLeave(index) {
+  function handleMouseLeave(currentIndex) {
     console.log(currentIndex);
   }
 
@@ -23,19 +35,21 @@ function StarRating(number) {
       <div>
         <h1> Star Rating </h1>
 
-        {[...Array(number)].map((_, index) => {
-          index += 1;
-
-          return (
-            <BsStarFill
-              key={index}
-              className={index <= rating ? "checked star" : "inactive star"}
-              onMouseMove={() => handleMouseMove(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
-              onClick={() => hanbleClick(index)}
-            />
-          )
-        })}
+        {
+          
+          numberOfStars.map((_, index) => {
+            return (
+              <BsStarFill
+                key={index}
+                className={index <= rating ? "checked star" : "inactive star"}
+                onMouseMove={() => handleMouseMove(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+                onClick={() => handleClick(index)}
+              />
+            );
+          })
+          
+        }
       </div>
     </div>
   );
