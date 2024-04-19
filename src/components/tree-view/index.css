@@ -5,7 +5,7 @@
     min-height: 100vh;
     font-size: 1.5rem;
     background-color: hsl(240, 11%, 86%);
-    width: 50%;
+    width: 275px;
 }
 .treeView ul li{
     margin-bottom: 10px;
@@ -19,7 +19,7 @@
 }
 
 .menu span{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .submenu{

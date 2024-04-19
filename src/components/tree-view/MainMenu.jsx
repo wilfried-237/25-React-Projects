@@ -1,6 +1,7 @@
 import { useState } from "react"
 import SubMenu from "./SubMenu"
 import	"./index.css"
+import { FaMinus, FaPlus } from "react-icons/fa"
 
 function MainMenu(prop) {
 
@@ -25,7 +26,7 @@ function MainMenu(prop) {
                     <div className="menu">
                     <li >{main.label} </li>
                   {
-                    main.children? <span onClick={()=>handleDisplay(main.label)}>{display[main.label]? "-" : "+"}</span> : null
+                    main.children? <span onClick={()=>handleDisplay(main.label)}>{display[main.label]? <FaMinus /> : <FaPlus /> }</span> : null
                   }
                     </div>
                   {
