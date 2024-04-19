@@ -12,7 +12,7 @@ function LoadMoreData() {
       setIsLoading(true);
 
       const response = await fetch(
-        `https://dummyjson.com/products?limit=10&skip=${getSkip}&select=title,price,images`
+        `https://dummyjson.com/products?limit=5&skip=${getSkip}&select=title,price,images`
       );
       const data = await response.json();
       const newData = data.products;
