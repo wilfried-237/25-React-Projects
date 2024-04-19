@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
-import reactLogo from "../../assets/react.svg";
 
 function LoadMoreData() {
   const [skip, setSkip] = useState(10);
@@ -19,11 +18,9 @@ function LoadMoreData() {
       const newData = data.products;
 
       if (data) {
-        setGetData(newData);
+        setGetData((prev)=> [...prev,...newData]);
         setIsLoading(false);
       }
-
-      console.log(getData);
 
     } catch (e) {
       setIsLoading(false);
@@ -70,7 +67,7 @@ function LoadMoreData() {
         </div>
 
         <div className="btnDiv">
-          <button onClick={() => loadMore()}>Load More Products</button>
+          <button disabled={getData.length === 50 && true} onClick={() => loadMore()}>Load More Products</button>
         </div>
       </div>
     </>

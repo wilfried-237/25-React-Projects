@@ -1,0 +1,28 @@
+.treeView{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background-color: hsl(240, 11%, 86%);
+    width: 50%;
+}
+.treeView ul li{
+    margin-bottom: 10px;
+}
+.treeView li{
+    list-style: none;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+}
+
+.menu span{
+    font-size: 30px;
+}
+
+.submenu{
+    
+    font-size: 1.2REM;
+}
