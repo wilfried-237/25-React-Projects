@@ -5,13 +5,14 @@ import StarRating from "./components/star-rating/StarRating"
 import ImageSlider from "./components/image-slider/ImageSlider"
 import TreeView from "./components/tree-view/TreeView"
 import data from "./components/tree-view/data"
-
+import QrCodeGenerator from "./components/QR Code Generator/QrCodeGenerator"
 
 
 function App() {
 
   return (
     <>
+    <QrCodeGenerator />
     <TreeView data={data} />
     <LoadMoreData />
     <StarRating number={10} />

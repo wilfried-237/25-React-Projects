@@ -1,0 +1,29 @@
+.QrCodeDiv{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.codeGenerator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+
+.codeGenerator input{
+    margin: 1px 0px 50px 0px;
+    padding: 10px;
+    margin-right: -1px;
+    outline: none;
+    border: 1px solid hsl(0, 5%, 60%);
+    border-radius: 10px 0px 0px 10px;
+    font-size: 1.06rem;
+}
+.codeGenerator button{
+    padding: 15px;
+    border-radius: 0px 10px 10px 0px;
+}
