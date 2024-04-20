@@ -6,19 +6,21 @@ import ImageSlider from "./components/image-slider/ImageSlider"
 import TreeView from "./components/tree-view/TreeView"
 import data from "./components/tree-view/data"
 import QrCodeGenerator from "./components/QR Code Generator/QrCodeGenerator"
+import LightDarkMode from "./components/Light-Dark-Mode/LightDarkMode"
 
 
 function App() {
 
   return (
     <>
-    <QrCodeGenerator />
+    <LightDarkMode />
+    {/* <QrCodeGenerator />
     <TreeView data={data} />
     <LoadMoreData />
     <StarRating number={10} />
     <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
     <RandomColorGenerator />
-    <Accordion />
+    <Accordion /> */}
     </>
   )
 }
