@@ -7,12 +7,14 @@ import TreeView from "./components/tree-view/TreeView"
 import data from "./components/tree-view/data"
 import QrCodeGenerator from "./components/QR Code Generator/QrCodeGenerator"
 import LightDarkMode from "./components/Light-Dark-Mode/LightDarkMode"
+import ScrollIndicator from "./components/Scroll-Indicator/ScrollIndicator"
 
 
 function App() {
 
   return (
     <>
+    <ScrollIndicator />
     <LightDarkMode />
     <QrCodeGenerator />
     <TreeView data={data} />
