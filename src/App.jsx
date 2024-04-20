@@ -8,12 +8,15 @@ import data from "./components/tree-view/data"
 import QrCodeGenerator from "./components/QR Code Generator/QrCodeGenerator"
 import LightDarkMode from "./components/Light-Dark-Mode/LightDarkMode"
 import ScrollIndicator from "./components/Scroll-Indicator/ScrollIndicator"
+import CustomTab from "./components/Custom-Tab/CustomTab"
 
 
 function App() {
 
   return (
     <>
+    
+    <CustomTab />
     <ScrollIndicator />
     <LightDarkMode />
     <QrCodeGenerator />

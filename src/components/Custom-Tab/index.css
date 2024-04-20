@@ -1,0 +1,30 @@
+.CustomTab{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.CustomTab .tab{
+    display: flex;
+    align-items: center;
+}
+
+.CustomTab .tab p{
+    padding: 10px 15px;
+    background-color: rgb(219, 14, 14);
+    color: white;
+    font-size: 25px;
+}
+
+.CustomTab .tab .active-tab{
+    background-color: hsl(240, 100%, 30%);
+}
+
+.CustomTab .content .active-content{
+    font-size: 20px;
+}
+.CustomTab .content .inactive-content{
+    display: none;
+}
