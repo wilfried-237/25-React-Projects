@@ -9,13 +9,14 @@ import QrCodeGenerator from "./components/QR Code Generator/QrCodeGenerator"
 import LightDarkMode from "./components/Light-Dark-Mode/LightDarkMode"
 import ScrollIndicator from "./components/Scroll-Indicator/ScrollIndicator"
 import CustomTab from "./components/Custom-Tab/CustomTab"
+import ModalPopup from "./components/Modal Popup/ModalPopup"
 
 
 function App() {
 
   return (
     <>
-    
+    <ModalPopup />
     <CustomTab />
     <ScrollIndicator />
     <LightDarkMode />
