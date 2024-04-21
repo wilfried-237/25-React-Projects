@@ -1,0 +1,36 @@
+.GithubProfileFinder{
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.GithubProfileFinder .searchBar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GithubProfileFinder .searchBar input{
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+}
+.GithubProfileFinder .searchBar button{
+    font-size: 18px;
+    padding: 11px;
+    margin-left: -2px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.profileView{
+    margin-top: 20px;
+    border: 1px solid hsl(0, 0%, 90%);
+    padding: 20px 30px;
+}

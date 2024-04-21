@@ -10,12 +10,14 @@ import LightDarkMode from "./components/Light-Dark-Mode/LightDarkMode"
 import ScrollIndicator from "./components/Scroll-Indicator/ScrollIndicator"
 import CustomTab from "./components/Custom-Tab/CustomTab"
 import ModalPopup from "./components/Modal Popup/ModalPopup"
+import GihubProfileFinder from "./components/Github-Profile-Finder/GithubProfileFinder"
 
 
 function App() {
 
   return (
     <>
+    <GihubProfileFinder />
     <ModalPopup />
     <CustomTab />
     <ScrollIndicator />
