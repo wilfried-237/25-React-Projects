@@ -18,8 +18,6 @@ function GithubProfileFinder() {
 
       if (data) {
         setGetData(data);
-
-        console.log(getData);
       }
     } catch (e) {
       setGetErrors(e.message());
@@ -54,7 +52,7 @@ function GithubProfileFinder() {
         <button onClick={() => input != "" && setSearchTerm(input)}>Search</button>
       </div>
 
-      {getData ? <UserProfil user={getData} /> : <div className="profileView">No Result Found...</div>}
+      {getData && getData.message !== "Not Found" ? <UserProfil user={getData} /> : <div className="profileView">No Result Found...</div>}
     </div>
   );
 }

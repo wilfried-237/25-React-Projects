@@ -1,7 +1,9 @@
 import './index.css'
 
 function UserProfil({user}) {
-  const {avatar_url, followers, following, public_repos, name, login, created_at} = user
+  const {avatar_url, followers, following, public_repos, name, login, created_at, message} = user
+
+  console.log(message)
   const createDate = new Date(created_at)
 
   return (
@@ -14,7 +16,7 @@ function UserProfil({user}) {
         </div>
         <p>Public Repos: {public_repos}</p>
         <p>Followers: {followers}</p>
-        <p>Following: {following}</p>
+        <p>Following: {following}</p> 
       </div>
   )
 }
