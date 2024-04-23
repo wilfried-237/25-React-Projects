@@ -3,62 +3,58 @@ import { useEffect, useState } from "react";
 import UserProfil from "./UserProfil";
 
 function GithubProfileFinder() {
+  const [input, setInput] = useState("");
+  const [searchTerm, setSearchTerm] = useState("wilfried-237");
+  const [getData, setGetData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [getErrors, setGetErrors] = useState(null);
 
-  const [input, setInput] = useState("wilfried237")
-  const [getData, setGetData] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [getErrors, setGetErrors] = useState(null)
+  async function fetchData(getInput) {
+    try {
+      setLoading(true);
+      const response = await fetch(`https://api.github.com/users/${getInput}`);
 
-  async function fetchData(getInput){
-      
-    try{
-      setLoading(true)
-      const response = await fetch(`https://api.github.com/users/${getInput}`)
+      const data = await response.json();
 
-      const data = response.json()
+      if (data) {
+        setGetData(data);
 
-      if(data){
-        setGetData(data)
+        console.log(getData);
       }
-
-    }catch(e){
-        setGetErrors(e.message())
-      setLoading(false)
-
+    } catch (e) {
+      setGetErrors(e.message());
+      setLoading(false);
     }
   }
 
-  useEffect(()=>{
-
-    if(input !== ""){
-      fetchData(input)
-      setLoading(false)
+  useEffect(() => {
+    if (searchTerm !== "") {
+      fetchData(searchTerm);
+      setLoading(false);
     }
+  }, [searchTerm]);
 
-  },[input])
-
-  if(getErrors){
-    return <h1>{getErrors}</h1>
+  if (getErrors) {
+    return <h1>{getErrors}</h1>;
   }
 
-  if(loading){
-    return <h1>Data Loading ! Please Wait...</h1>
+  if (loading) {
+    return <h1>Data Loading ! Please Wait...</h1>;
   }
-  
-
 
   return (
     <div className="GithubProfileFinder">
-      <h1>Github Profile Finder App</h1>
+      <h1>Github Profile Finder</h1>
       <div className="searchBar">
-        <input type="text" placeholder="Enter Profile Name..." onChange={(e)=>setInput(e.target.value)} />
-        <button>Search</button>
+        <input
+          type="text"
+          placeholder="Enter Profile Name..."
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button onClick={() => input != "" && setSearchTerm(input)}>Search</button>
       </div>
 
-      {
-        getData? <UserProfil user={getData}/> :null
-      }
-      
+      {getData ? <UserProfil user={getData} /> : <div className="profileView">No Result Found...</div>}
     </div>
   );
 }
