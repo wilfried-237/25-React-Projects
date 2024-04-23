@@ -11,14 +11,16 @@ import ScrollIndicator from "./components/Scroll-Indicator/ScrollIndicator"
 import CustomTab from "./components/Custom-Tab/CustomTab"
 import ModalPopup from "./components/Modal Popup/ModalPopup"
 import GihubProfileFinder from "./components/Github-Profile-Finder/GithubProfileFinder"
+import SearchAutoComplete from "./components/Search-Auto-Complete-API/SearchAutoComplete"
 
 
 function App() {
 
   return (
     <>
-    <GihubProfileFinder />
-    {/* <ModalPopup />
+    <SearchAutoComplete />
+    {/* <GihubProfileFinder />
+    <ModalPopup />
     <CustomTab />
     <ScrollIndicator />
     <LightDarkMode />
