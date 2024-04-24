@@ -1,44 +1,45 @@
 import { useState } from 'react'
 import './index.css'
 
-function SearchAutoComplete() {
+export default function SearchAutoComplete() {
 
-    const [searchTerm, setSearchTerm] = useState("ma")
-    const [getData, setGetData] = useState([])
-    const [searchResults, setSearchResults] = useState([])
+    const [searchTerm, setSearchTerm] = useState("ma");
+    const [getData, setGetData] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
     const [loading, setLoading] = useState(false);
   const [getErrors, setGetErrors] = useState(null);
     
 
-    async function fetchData(){
+  async function fetchData(){
         try{
-            setLoading(true)
-            const response = await fetch(`https://dummyjson.com/products?limit=1000`)
-        const data = await response.json()
+            setLoading(true);
+            const response = await fetch(`https://dummyjson.com/products?limit=1000`);
+            const data = await response.json();
 
-        if(data){
-            setGetData(data.products)
-            
-            console.log(getData)
-            
-        }
+            if(data){
+                setGetData(data.products);
+                
+                console.log(getData);
+                
+            }
         }catch(e){
-            setGetErrors(e.message)
-            setLoading(false)
+            setGetErrors(e.message);
+            setLoading(false);
+        }      
     }
 
     useState(()=>{
-        fetchData()
+        fetchData();
 
         if(searchTerm && searchTerm.length > 1){
-            let copyData = [...getData]
+            let copyData = [...getData];
 
-            console.log(copyData)
+            console.log(copyData);
 
             
 
-            setSearchResults(copyData)
-            setLoading(false)
+            setSearchResults(copyData);
+            setLoading(false);
         }
     }, [searchTerm])
 
@@ -69,5 +70,3 @@ function SearchAutoComplete() {
     </div>
   )
 }
-
-export default SearchAutoComplete
