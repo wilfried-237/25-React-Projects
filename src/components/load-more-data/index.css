@@ -10,7 +10,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 20px 0px;
     
 }
 
@@ -26,7 +26,7 @@
 
 
 .itemCard{
-    width: 25%;
+    width: 20%;
     padding: 20px;
     margin: 10px;
     border-radius: 5px;

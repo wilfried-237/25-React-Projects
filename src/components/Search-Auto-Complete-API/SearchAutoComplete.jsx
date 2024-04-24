@@ -45,7 +45,6 @@ export default function SearchAutoComplete() {
   }
 
   console.log(getData)
-  console.log(searchResults)
 
   useEffect(() => {
     fetchData();
@@ -66,7 +65,7 @@ export default function SearchAutoComplete() {
         type="text"
         value={searchTerm}
         onChange={(e) => handleChange(e)}
-        placeholder="Enter Search Term..."
+        placeholder="Enter User Name..."
       />
       <div>
         <ul className="auto-complete">
