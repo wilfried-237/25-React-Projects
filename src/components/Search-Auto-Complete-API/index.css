@@ -4,14 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: hsl(0, 0%, 50%);
+    animation: listAnimation;
+    animation-duration: 1s;
 }
 
 .SearchAutoComplete input{
     margin-top: 20px;
-    display: inline-block;
     font-size: 1rem;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    outline: none;
 }
 
 .SearchAutoComplete .auto-complete{
@@ -24,7 +28,20 @@
     align-items: center;
     background-color: hsl(0, 0%, 90%);
     gap: 5px;
+    animation: listAnimation;
+    animation-duration: 1s;
 }
+
+@keyframes listAnimation{
+    from{
+        margin-left: -1000px;
+    }
+
+    to{
+       
+    }
+}
+
 .SearchAutoComplete .auto-complete li{
     list-style: none;
     padding: 10px;

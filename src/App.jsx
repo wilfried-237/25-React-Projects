@@ -19,7 +19,7 @@ function App() {
   return (
     <>
     <SearchAutoComplete />
-    {/* <GihubProfileFinder />
+    <GihubProfileFinder />
     <ModalPopup />
     <CustomTab />
     <ScrollIndicator />
@@ -30,7 +30,7 @@ function App() {
     <StarRating number={10} />
     <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
     <RandomColorGenerator />
-    <Accordion /> */}
+    <Accordion />
     </>
   )
 }
