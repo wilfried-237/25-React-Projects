@@ -12,13 +12,15 @@ import CustomTab from "./components/Custom-Tab/CustomTab"
 import ModalPopup from "./components/Modal Popup/ModalPopup"
 import GihubProfileFinder from "./components/Github-Profile-Finder/GithubProfileFinder"
 import SearchAutoComplete from "./components/Search-Auto-Complete-API/SearchAutoComplete"
+import TicTacToe from "./components/Tic-Tac-Toe/TicTacToe"
 
 
 function App() {
 
   return (
     <>
-    <SearchAutoComplete />
+    <TicTacToe />
+    {/* <SearchAutoComplete />
     <GihubProfileFinder />
     <ModalPopup />
     <CustomTab />
@@ -30,7 +32,7 @@ function App() {
     <StarRating number={10} />
     <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
     <RandomColorGenerator />
-    <Accordion />
+    <Accordion /> */}
     </>
   )
 }
