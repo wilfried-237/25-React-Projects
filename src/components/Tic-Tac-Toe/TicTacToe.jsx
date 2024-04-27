@@ -20,17 +20,21 @@ function TicTacToe() {
         [3,6,9],    
         [1,5,9],    
         [3,5,7] 
-       ]
+       ];
 
     for(let i=0; i<winnerPaterns.length; ){
-        const [x,y,z] = winnerPaterns
+        const [x,y,z] = winnerPaterns[i];
+
+        if(newValue && newValue[x] == newValue[y] && newValue[x]== newValue[z]){
+            return newValue[x];
+        }
     }
 
 
    }
 
    useEffect(()=>{
-
+        getWinner();
 
    }, [newValue])
 
@@ -40,7 +44,7 @@ function TicTacToe() {
 
         const copyValue = [...newValue];
 
-        if(copyValue[index]) return;
+        if(getWinner() || copyValue[index]) return;
 
         if(isXturn){
 
