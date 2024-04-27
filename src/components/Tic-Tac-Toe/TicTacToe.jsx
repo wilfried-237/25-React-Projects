@@ -40,11 +40,11 @@ function getWinner(value){
       getWinner(newValue);
       
       if(winner){
-          setMessage(`Winner is ${winner}`)
+          setMessage(`The Winner is ${winner}`)
       }else if(!winner && newValue[0] != "" && newValue[1] != "" && newValue[2] != "" && newValue[3] != "" && newValue[4] != "" && newValue[5] != "" && newValue[6] != "" && newValue[7] != "" && newValue[8] != ""){
-        setMessage(`It's is a draw please Reset Game`)
+        setMessage(`It's is a Draw please Reset Game`)
       }else{
-        setMessage(`It's is ${isXturn? "X" : "O"} turn`)
+        setMessage(`Next player is ${isXturn? "X" : "O"}`)
       }
 
  }, [newValue, winner])
@@ -59,7 +59,7 @@ function getWinner(value){
 
         if(isXturn){
 
-            copyValue[index] = "x";
+            copyValue[index] = "X";
             setNewValue(()=> copyValue);
             setIsXTurn(!isXturn);
         }else{

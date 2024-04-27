@@ -3,7 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 90%, 45%);
+    color: white;
 }
 
 .TicTacToe h1{
@@ -18,10 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 70px;
     width: 100px;
     height: 100px;
-    border: 1px solid #ff0000;
+    border: 1px solid #ffffff;
     margin-left: -1px;
     margin-top: -1px;
 }
