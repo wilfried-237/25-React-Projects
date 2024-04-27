@@ -5,38 +5,49 @@ function TicTacToe() {
 
    const [newValue, setNewValue] = useState(Array(9).fill(""));
    const [isXturn, setIsXTurn] = useState(true);
+   const [winner, setWinner] = useState("");
+   const [message, setMessage] = useState("");
 
-//    1 2 3
-//    4 5 6
-//    7 8 9
+//    0 1 2
+//    3 4 5
+//    6 7 8
 
-   function getWinner(newValue){
-    const winnerPaterns = [
-        [1,2,3],    
-        [4,5,6],    
-        [7,8,9],    
-        [1,4,7],    
-        [2,5,8],    
-        [3,6,9],    
-        [1,5,9],    
-        [3,5,7] 
-       ];
+function getWinner(value){
+  const winnerPaterns = [
+      [0,1,2],    
+      [3,4,5],    
+      [6,7,8],    
+      [0,4,8],
+      [6,4,2],
+      [0,3,6],
+      [1,4,7],
+      [2,5,8]
+     ];
 
-    for(let i=0; i<winnerPaterns.length; ){
-        const [x,y,z] = winnerPaterns[i];
+  for(let i=0; i<winnerPaterns.length; i++){
+      const [x,y,z] = winnerPaterns[i];
 
-        if(newValue && newValue[x] == newValue[y] && newValue[x]== newValue[z]){
-            return newValue[x];
-        }
-    }
+      if(value[x] && value[x] == value[y] && value[x] == value[z]){
+          return setWinner(value[x]);
+      }
+  }
 
 
-   }
+ }
 
-   useEffect(()=>{
-        getWinner();
+ useEffect(()=>{
+  
+      getWinner(newValue);
+      
+      if(winner){
+          setMessage(`Winner is ${winner}`)
+      }else if(!winner && newValue[0] != "" && newValue[1] != "" && newValue[2] != "" && newValue[3] != "" && newValue[4] != "" && newValue[5] != "" && newValue[6] != "" && newValue[7] != "" && newValue[8] != ""){
+        setMessage(`It's is a draw please Reset Game`)
+      }else{
+        setMessage(`It's is ${isXturn? "X" : "O"} turn`)
+      }
 
-   }, [newValue])
+ }, [newValue, winner])
 
    
 
@@ -44,7 +55,7 @@ function TicTacToe() {
 
         const copyValue = [...newValue];
 
-        if(getWinner() || copyValue[index]) return;
+        if(winner || copyValue[index]) return;
 
         if(isXturn){
 
@@ -52,11 +63,18 @@ function TicTacToe() {
             setNewValue(()=> copyValue);
             setIsXTurn(!isXturn);
         }else{
-            copyValue[index] = "0"
+            copyValue[index] = "O"
             setNewValue(()=> copyValue);
             setIsXTurn(!isXturn);
         }
 
+    }
+
+    const handleReset = () =>{
+      setNewValue(Array(9).fill(""));
+      setIsXTurn(true);
+      setWinner("");
+      setMessage("")
     }
 
 
@@ -84,6 +102,8 @@ function TicTacToe() {
         <Square onClick = {()=> handleClick(7)} value = {newValue[7]} />
         <Square onClick = {()=> handleClick(8)} value = {newValue[8]} />
       </div>
+      <h2>{message}</h2>
+      <button onClick={handleReset}>Reset Game</button>
     </div>
   );
 }
