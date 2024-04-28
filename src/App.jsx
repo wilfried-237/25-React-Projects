@@ -15,12 +15,14 @@ import SearchAutoComplete from "./components/Search-Auto-Complete-API/SearchAuto
 import TicTacToe from "./components/Tic-Tac-Toe/TicTacToe"
 import UseFetchHookTest from "./components/use-fetch-hook/UseFetchHookTest"
 import UseOutsideTest from "./components/use-outside-click/UseOutsideTest"
+import WindowsResize from "./components/windows-resize/WindowsResize"
 
 
 function App() {
 
   return (
     <>
+    <WindowsResize />
     <UseOutsideTest />
     <UseFetchHookTest />
     <TicTacToe />
