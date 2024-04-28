@@ -14,14 +14,16 @@ import GihubProfileFinder from "./components/Github-Profile-Finder/GithubProfile
 import SearchAutoComplete from "./components/Search-Auto-Complete-API/SearchAutoComplete"
 import TicTacToe from "./components/Tic-Tac-Toe/TicTacToe"
 import UseFetchHookTest from "./components/use-fetch-hook/UseFetchHookTest"
+import UseOutsideTest from "./components/use-outside-click/UseOutsideTest"
 
 
 function App() {
 
   return (
     <>
+    <UseOutsideTest />
     <UseFetchHookTest />
-    {/* <TicTacToe />
+    <TicTacToe />
     <SearchAutoComplete />
     <GihubProfileFinder />
     <ModalPopup />
@@ -34,7 +36,7 @@ function App() {
     <StarRating number={10} />
     <ImageSlider url={"https://picsum.photos/v2/list"} page={"1"} limit={"10"} />
     <RandomColorGenerator />
-    <Accordion /> */}
+    <Accordion />
     </>
   )
 }

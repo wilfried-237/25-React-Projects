@@ -7,11 +7,13 @@ export default function UseFetchHookTest() {
 
   return (
     <div className='UseFetchHookTest'>
+      <h1>Use Fetch Hook</h1>
+      <a href="#Buttom" id='Top'>Scoll to Buttom</a>
       {
-        loading? <h1>Data Loading ! Please Wait</h1> : null
+        loading? <h2>Data Loading ! Please Wait</h2> : null
       }
       {
-        error? <h1>{error}</h1> : null
+        error? <h2>{error}</h2> : null
       }
       {
         data && data.products && data.products.length > 0? 
