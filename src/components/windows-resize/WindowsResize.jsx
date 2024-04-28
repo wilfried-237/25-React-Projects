@@ -7,8 +7,9 @@ function WindowsResize() {
 
   return (
     <div className='WindowsResize'>
-        <h1>Windows Width: {width}</h1>
-        <h1>Windows Height: {height}</h1>
+        <h1>Use Window Resize Hook</h1>
+        <p>Windows Width: {width}</p>
+        <p>Windows Height: {height}</p>
     </div>
   )
 }

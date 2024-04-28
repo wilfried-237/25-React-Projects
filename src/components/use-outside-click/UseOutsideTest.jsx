@@ -11,6 +11,7 @@ function UseOutsideTest() {
 
   return (
     <div className="UseOutsideTest">
+      <h1>Use Click Outside Hook</h1>
       {!showText ? (
         <button onClick={()=> setShowText(true)}>Click To Show Text</button>
       ) : (

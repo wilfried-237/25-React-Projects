@@ -16,12 +16,14 @@ import TicTacToe from "./components/Tic-Tac-Toe/TicTacToe"
 import UseFetchHookTest from "./components/use-fetch-hook/UseFetchHookTest"
 import UseOutsideTest from "./components/use-outside-click/UseOutsideTest"
 import WindowsResize from "./components/windows-resize/WindowsResize"
+import ScrollTopBottom from "./components/scroll-to-top-and-bottom/ScrollTopBottom"
 
 
 function App() {
 
   return (
     <>
+    <ScrollTopBottom />
     <WindowsResize />
     <UseOutsideTest />
     <UseFetchHookTest />

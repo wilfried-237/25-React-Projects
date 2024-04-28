@@ -1,4 +1,10 @@
 .WindowsResize{
     min-height: 100vh;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.WindowsResize p{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
